@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class GrappleGun : MonoBehaviour
 {
-    public GameObject endOfGrapple;
+    public GameObject endOfGrappleGun;
+    public GameObject endOfHook;
 
     // Start is called before the first frame update
     void Start()
@@ -17,15 +18,16 @@ public class GrappleGun : MonoBehaviour
     {
         RaycastHit Hit;
 
-        if (Physics.Raycast(endOfGrapple.transform.position,endOfGrapple.transform.localRotation.eulerAngles,out Hit,20))
+        if (Physics.Raycast(endOfGrappleGun.transform.position, transform.localToWorldMatrix * Vector3.left * 200, out Hit))
         {
-            if (Hit.transform.gameObject.tag == "Grappleable")
+            if (Hit.transform.gameObject.tag == "Grappleable" && Input.GetMouseButtonDown(1))
             {
-                Debug.Log("can grapple");
+                Debug.Log("Grapple");
+                Instantiate(endOfHook);
             }
         }
 
 
-        Debug.DrawRay(endOfGrapple.transform.position, endOfGrapple.transform.localRotation.eulerAngles, Color.white,20);
+        Debug.DrawRay(endOfGrappleGun.transform.position, transform.localToWorldMatrix * Vector3.left * 100,Color.white);
     }
 }
