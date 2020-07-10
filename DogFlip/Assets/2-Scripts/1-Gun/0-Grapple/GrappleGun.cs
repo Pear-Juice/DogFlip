@@ -17,10 +17,7 @@ public class GrappleGun : MonoBehaviour
     {
         RaycastHit Hit;
 
-        if (Physics.Raycast(endOfGrapple.transform.position, new Vector3(
-            endOfGrapple.transform.localRotation.x,
-            endOfGrapple.transform.localRotation.y,
-            endOfGrapple.transform.localRotation.z), out Hit, 1))
+        if (Physics.Raycast(endOfGrapple.transform.position,endOfGrapple.transform.localRotation.eulerAngles,out Hit,20))
         {
             if (Hit.transform.gameObject.tag == "Grappleable")
             {
@@ -28,5 +25,7 @@ public class GrappleGun : MonoBehaviour
             }
         }
 
+
+        Debug.DrawRay(endOfGrapple.transform.position, endOfGrapple.transform.localRotation.eulerAngles, Color.white,20);
     }
 }
