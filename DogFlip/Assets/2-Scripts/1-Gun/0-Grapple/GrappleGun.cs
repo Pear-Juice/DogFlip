@@ -48,6 +48,7 @@ public class GrappleGun : MonoBehaviour
                     Debug.Log("GrappleObject");
                     hook = Instantiate(endOfHook, Hit.transform.position, Hit.transform.rotation);
 
+                    grappleLetGo = false;
                     grappleObject = true;
                 }
 
@@ -56,6 +57,7 @@ public class GrappleGun : MonoBehaviour
                     Debug.Log("GrappleEnemy");
                     hook = Instantiate(endOfHook, Hit.transform.position, Hit.transform.rotation);
 
+                    grappleLetGo = false;
                     grappleEnemy = true;
                 }
             }
@@ -105,15 +107,23 @@ public class GrappleGun : MonoBehaviour
 
         if (grappleObject)
         {
+            sharkHook.transform.position = Vector3.MoveTowards(sharkHook.transform.position, hook.transform.position, 150 * Time.deltaTime);
+
             Rigidbody rb = grappledObject.GetComponent<Rigidbody>();
-            if(rb) rb.AddExplosionForce(-force, transform.position, 200); // checks that grappleObject has rigidbody before applying force
+
+            if (sharkHook.transform.position == hook.transform.position && rb)
+                rb.AddExplosionForce(-force, transform.position, 200);
         }
         
         if (grappleEnemy)
         {
-			Rigidbody rb = grappledObject.GetComponent<Rigidbody>();
-            if(rb) rb.AddExplosionForce(-force, transform.position, 200); // checks that grappleObject has rigidbody before applying force
-		}
+            sharkHook.transform.position = Vector3.MoveTowards(sharkHook.transform.position, hook.transform.position, 150 * Time.deltaTime);
+
+            Rigidbody rb = grappledObject.GetComponent<Rigidbody>();
+
+            if (sharkHook.transform.position == hook.transform.position && rb)
+                rb.AddExplosionForce(-force, transform.position, 200);
+        }
 
 
     }
