@@ -7,6 +7,8 @@ public class handgun : MonoBehaviour
     public GameObject player;
     Rigidbody rb;
 	ParticleSystem ps;
+
+    public int Damage;
 	public float weaponForce = 10;
 
     // Start is called before the first frame update
@@ -23,11 +25,21 @@ public class handgun : MonoBehaviour
 			ps.Emit(1);
 			rb.AddForce(-transform.forward * weaponForce, ForceMode.Impulse);
         }
+
+
+        
     }
 
     private void OnParticleCollision(GameObject other) {
 		if (other.tag == "Enemy") {
-			Debug.Log("Hit Enemy"); // todo: make enemy react
+
+            Enemy enemy = other.GetComponent<Enemy>();
+
+            if (enemy != null)
+            {
+                enemy.OnHit(Damage);
+            }
+        
 		}
 	}
 }
