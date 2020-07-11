@@ -5407,6 +5407,12 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!1 &1014087018 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6523496505612599708, guid: 307db83f4e4eef242bce2d3e0b80fb6b,
+    type: 3}
+  m_PrefabInstance: {fileID: 6523496506171758131}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1186359769
 GameObject:
   m_ObjectHideFlags: 0
@@ -5610,6 +5616,7 @@ GameObject:
   - component: {fileID: 1320440974}
   - component: {fileID: 1320440979}
   - component: {fileID: 1320440980}
+  - component: {fileID: 1320440981}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -5737,6 +5744,20 @@ MonoBehaviour:
     type: 3}
   force: 50
   rb: {fileID: 1320440974}
+--- !u!114 &1320440981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320440973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3ea82d5ef8a79c4bb3efa61ab261b6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyObject: {fileID: 1014087018}
+  Heath: 10
 --- !u!1 &1572943274
 GameObject:
   m_ObjectHideFlags: 0
@@ -5946,6 +5967,11 @@ PrefabInstance:
         type: 3}
       propertyPath: Health
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7714902868900285320, guid: 307db83f4e4eef242bce2d3e0b80fb6b,
+        type: 3}
+      propertyPath: Damage
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 307db83f4e4eef242bce2d3e0b80fb6b, type: 3}
