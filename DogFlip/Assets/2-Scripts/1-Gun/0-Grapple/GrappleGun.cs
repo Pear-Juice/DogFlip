@@ -34,6 +34,10 @@ public class GrappleGun : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(1))
             {
+                Audio audio = GetComponent<Audio>();
+                audio.PlayGrapple();
+
+
 				grappleLR.enabled = true;
 				if (Hit.transform.gameObject.tag == "Grappleable")
                 {
