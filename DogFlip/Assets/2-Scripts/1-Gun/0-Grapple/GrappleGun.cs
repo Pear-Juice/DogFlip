@@ -28,7 +28,7 @@ public class GrappleGun : MonoBehaviour
     {
         RaycastHit Hit;
 
-        if (Physics.Raycast(transform.position, transform.localToWorldMatrix * Vector3.back * 200, out Hit))
+        if (Physics.BoxCast(transform.position, new Vector3(.1f, .1f, .5f), -transform.forward * 200, out Hit))
         {
             if (Input.GetMouseButtonDown(1))
             {
