@@ -5657,7 +5657,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyObject: {fileID: 1014087018}
-  Health: 0
+  Health: 30
 --- !u!114 &1880141209
 MonoBehaviour:
   m_ObjectHideFlags: 0
