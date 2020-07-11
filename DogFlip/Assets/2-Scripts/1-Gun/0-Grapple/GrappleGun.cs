@@ -7,6 +7,7 @@ public class GrappleGun : MonoBehaviour
     public GameObject endOfGrappleGun;
     public GameObject endOfHook;
     public GameObject sharkHook;
+    public GameObject sharkGun;
     public int force = 0;
     public Rigidbody rb;
 
@@ -16,13 +17,15 @@ public class GrappleGun : MonoBehaviour
     bool grappleLetGo;
 
     GameObject grappledObject;
-
+    Vector3 startScale;
+    Quaternion startRotation;
     GameObject hook;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        startScale = sharkHook.transform.localScale;
+        startRotation = sharkHook.transform.localRotation;
     }
 
     // Update is called once per frame
@@ -38,6 +41,8 @@ public class GrappleGun : MonoBehaviour
                 {
                     Debug.Log("GrappleWall");
                     hook = Instantiate(endOfHook, Hit.point, Hit.transform.rotation);
+
+                    sharkHook.transform.parent = null;
 
                     grappleLetGo = false;
                     grappleWall = true;
@@ -83,6 +88,14 @@ public class GrappleGun : MonoBehaviour
             grappleObject = false;
 
             grappleLetGo = true;
+
+            sharkHook.transform.parent = sharkGun.transform;
+
+            sharkHook.transform.localPosition = Vector3.zero;
+            //sharkHook.transform.localRotation = Quaternion.identity;
+
+            //sharkHook.transform.localScale = startScale;
+            sharkHook.transform.localRotation = startRotation;
             
         }
 
@@ -90,6 +103,8 @@ public class GrappleGun : MonoBehaviour
         {
             sharkHook.transform.position = Vector3.MoveTowards(sharkHook.transform.position, endOfGrappleGun.transform.position, 100 * Time.deltaTime);
         }
+
+        
 
 
         Debug.DrawRay(transform.position, transform.localToWorldMatrix * Vector3.back * 100,Color.white);

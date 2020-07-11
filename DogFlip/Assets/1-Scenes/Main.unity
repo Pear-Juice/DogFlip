@@ -5755,6 +5755,7 @@ MonoBehaviour:
   endOfHook: {fileID: 6836889606898402615, guid: e7adf89fd87680f4c8b9622644ebcfc9,
     type: 3}
   sharkHook: {fileID: 949128052}
+  sharkGun: {fileID: 1996141910}
   force: 50
   rb: {fileID: 1880141211}
 --- !u!114 &1880141210
