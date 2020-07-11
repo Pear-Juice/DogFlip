@@ -6,12 +6,14 @@ public class GrappleGun : MonoBehaviour
 {
     public GameObject endOfGrappleGun;
     public GameObject endOfHook;
+    public GameObject sharkHook;
     public int force = 0;
     public Rigidbody rb;
 
     bool grappleWall;
     bool grappleObject;
     bool grappleEnemy;
+    bool grappleLetGo;
 
     GameObject grappledObject;
 
@@ -37,6 +39,7 @@ public class GrappleGun : MonoBehaviour
                     Debug.Log("GrappleWall");
                     hook = Instantiate(endOfHook, Hit.point, Hit.transform.rotation);
 
+                    grappleLetGo = false;
                     grappleWall = true;
                 }
 
@@ -76,6 +79,14 @@ public class GrappleGun : MonoBehaviour
             grappleWall = false;
             grappleEnemy = false;
             grappleObject = false;
+
+            grappleLetGo = true;
+            
+        }
+
+        if (grappleLetGo)
+        {
+            sharkHook.transform.position = Vector3.MoveTowards(sharkHook.transform.position, endOfGrappleGun.transform.position, 100 * Time.deltaTime);
         }
 
 
@@ -86,7 +97,10 @@ public class GrappleGun : MonoBehaviour
     {
         if (grappleWall)
         {
-            rb.AddExplosionForce(-force, hook.transform.position, 200);
+            sharkHook.transform.position = Vector3.MoveTowards(sharkHook.transform.position, hook.transform.position, 150 * Time.deltaTime);
+
+            if (sharkHook.transform.position == hook.transform.position)
+                rb.AddExplosionForce(-force, hook.transform.position, 200);
         }
 
         if (grappleObject)
