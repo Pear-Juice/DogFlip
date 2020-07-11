@@ -267,6 +267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1320440978}
   shootDistance: 20
+  bulletPoolRoot: {fileID: 0}
 --- !u!65 &559159217
 BoxCollider:
   m_ObjectHideFlags: 0
