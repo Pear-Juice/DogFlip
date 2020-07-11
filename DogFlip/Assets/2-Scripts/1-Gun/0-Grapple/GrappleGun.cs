@@ -22,7 +22,7 @@ public class GrappleGun : MonoBehaviour
     {
         RaycastHit Hit;
 
-        if (Physics.Raycast(transform.position, transform.localToWorldMatrix * Vector3.left * 200, out Hit))
+        if (Physics.Raycast(transform.position, transform.localToWorldMatrix * Vector3.back * 200, out Hit))
         {
             if (Hit.transform.gameObject.tag == "Grappleable" && Input.GetMouseButtonDown(1))
             {
@@ -39,7 +39,7 @@ public class GrappleGun : MonoBehaviour
         }
 
 
-        Debug.DrawRay(transform.position, transform.localToWorldMatrix * Vector3.left * 100,Color.white);
+        Debug.DrawRay(transform.position, transform.localToWorldMatrix * Vector3.back * 100,Color.white);
     }
 
     private void FixedUpdate()
