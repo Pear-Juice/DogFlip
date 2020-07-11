@@ -29,6 +29,11 @@ public class Pause : MonoBehaviour
                 pauseMenu.active = false;
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 
     public void Resume()
