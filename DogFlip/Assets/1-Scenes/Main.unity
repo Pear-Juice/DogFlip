@@ -640,6 +640,8 @@ MonoBehaviour:
   endOfGrappleGun: {fileID: 1890472130}
   endOfHook: {fileID: 6836889606898402615, guid: e7adf89fd87680f4c8b9622644ebcfc9,
     type: 3}
+  force: 100
+  rb: {fileID: 1320440974}
 --- !u!1 &1360728843
 GameObject:
   m_ObjectHideFlags: 0

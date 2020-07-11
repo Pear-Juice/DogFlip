@@ -6,6 +6,10 @@ public class GrappleGun : MonoBehaviour
 {
     public GameObject endOfGrappleGun;
     public GameObject endOfHook;
+    public int force = 0;
+    public Rigidbody rb;
+
+    GameObject hook;
 
     // Start is called before the first frame update
     void Start()
@@ -18,16 +22,31 @@ public class GrappleGun : MonoBehaviour
     {
         RaycastHit Hit;
 
-        if (Physics.Raycast(endOfGrappleGun.transform.position, transform.localToWorldMatrix * Vector3.left * 200, out Hit))
+        if (Physics.Raycast(transform.position, transform.localToWorldMatrix * Vector3.left * 200, out Hit))
         {
             if (Hit.transform.gameObject.tag == "Grappleable" && Input.GetMouseButtonDown(1))
             {
                 Debug.Log("Grapple");
-                Instantiate(endOfHook);
+                hook = Instantiate(endOfHook, Hit.point, Hit.transform.rotation);
+
+                
             }
         }
 
+        if (Input.GetMouseButtonUp(1))
+        {
+            Destroy(hook);
+        }
 
-        Debug.DrawRay(endOfGrappleGun.transform.position, transform.localToWorldMatrix * Vector3.left * 100,Color.white);
+
+        Debug.DrawRay(transform.position, transform.localToWorldMatrix * Vector3.left * 100,Color.white);
+    }
+
+    private void FixedUpdate()
+    {
+        if (hook != null)
+        {
+            rb.AddExplosionForce(-force, endOfGrappleGun.transform.position, 200);
+        }
     }
 }
