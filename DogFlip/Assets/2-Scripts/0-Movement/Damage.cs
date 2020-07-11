@@ -29,7 +29,6 @@ public class Damage : MonoBehaviour
 
     void Death()
     {
-        if (this.gameObject != null)
-            Destroy(this.gameObject);
-    }
+		gameObject.SetActive(false);
+	}
 }
