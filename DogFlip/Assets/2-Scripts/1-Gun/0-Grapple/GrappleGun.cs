@@ -43,7 +43,7 @@ public class GrappleGun : MonoBehaviour
                 if (Hit.transform.gameObject.tag == "Object")
                 {
                     Debug.Log("GrappleObject");
-                    hook = Instantiate(endOfHook, Hit.point, Hit.transform.rotation);
+                    hook = Instantiate(endOfHook, Hit.transform.position, Hit.transform.rotation);
 
                     grappleObject = true;
                 }
@@ -51,11 +51,23 @@ public class GrappleGun : MonoBehaviour
                 if (Hit.transform.gameObject.tag == "Enemy")
                 {
                     Debug.Log("GrappleEnemy");
-                    hook = Instantiate(endOfHook, Hit.point, Hit.transform.rotation);
+                    hook = Instantiate(endOfHook, Hit.transform.position, Hit.transform.rotation);
 
                     grappleEnemy = true;
                 }
             }
+
+            if (grappleEnemy)
+            {
+                hook.transform.position = grappledObject.transform.position;
+            }
+
+            if (grappleObject)
+            {
+                hook.transform.position = grappledObject.transform.position;
+            }
+
+            grappledObject = Hit.transform.gameObject;
         }
 
         if (Input.GetMouseButtonUp(1))
@@ -79,12 +91,12 @@ public class GrappleGun : MonoBehaviour
 
         if (grappleObject)
         {
-            rb.AddExplosionForce(-force, hook.transform.position, 200);
+            grappledObject.GetComponent<Rigidbody>().AddExplosionForce(-force, transform.position, 200);
         }
         
         if (grappleEnemy)
         {
-            rb.AddExplosionForce(-force, hook.transform.position, 200);
+            grappledObject.GetComponent<Rigidbody>().AddExplosionForce(-force, transform.position, 200);
         }
 
 
