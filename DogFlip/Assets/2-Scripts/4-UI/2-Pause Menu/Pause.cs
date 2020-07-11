@@ -6,6 +6,35 @@ using UnityEngine.SceneManagement;
 public class Pause : MonoBehaviour
 {
     private int currentScene;
+    public GameObject pauseMenu;
+
+    private void Start()
+    {
+        Time.timeScale = 1;
+        pauseMenu.active = false;
+    }
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if(Time.timeScale == 1)
+            {
+                Time.timeScale = 0;
+                pauseMenu.active = true;
+            }
+            else if(Time.timeScale == 0)
+            {
+                Time.timeScale = 1;
+                pauseMenu.active = false;
+            }
+        }
+    }
+
+    public void Resume()
+    {
+        Time.timeScale = 1;
+    }
 
     public void exitToMenu()
     {
