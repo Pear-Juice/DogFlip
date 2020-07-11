@@ -46,7 +46,7 @@ public class GrappleGun : MonoBehaviour
     {
         if (hook != null)
         {
-            rb.AddExplosionForce(-force, endOfGrappleGun.transform.position, 200);
+            rb.AddExplosionForce(-force, hook.transform.position, 200);
         }
     }
 }
