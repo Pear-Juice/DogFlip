@@ -7,7 +7,6 @@ public class GrappleGun : MonoBehaviour
     public GameObject endOfGrappleGun;
     public GameObject endOfHook;
     public GameObject sharkHook;
-    public GameObject sharkGun;
     public int force = 0;
     public Rigidbody rb;
 
@@ -17,16 +16,14 @@ public class GrappleGun : MonoBehaviour
     bool grappleLetGo;
 
     GameObject grappledObject;
-    Vector3 startScale;
-    Quaternion startRotation;
+
     GameObject hook;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        startScale = sharkHook.transform.localScale;
-        startRotation = sharkHook.transform.localRotation;
-    }
+	LineRenderer grappleLR; // grapple tether line renderer
+
+    private void Awake() {
+		grappleLR = endOfGrappleGun.GetComponent<LineRenderer>();
+	}
 
     // Update is called once per frame
     void Update()
@@ -37,12 +34,11 @@ public class GrappleGun : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(1))
             {
-                if (Hit.transform.gameObject.tag == "Grappleable")
+				grappleLR.enabled = true;
+				if (Hit.transform.gameObject.tag == "Grappleable")
                 {
                     Debug.Log("GrappleWall");
                     hook = Instantiate(endOfHook, Hit.point, Hit.transform.rotation);
-
-                    sharkHook.transform.parent = null;
 
                     grappleLetGo = false;
                     grappleWall = true;
@@ -89,22 +85,13 @@ public class GrappleGun : MonoBehaviour
 
             grappleLetGo = true;
 
-            sharkHook.transform.parent = sharkGun.transform;
-
-            sharkHook.transform.localPosition = Vector3.zero;
-            //sharkHook.transform.localRotation = Quaternion.identity;
-
-            //sharkHook.transform.localScale = startScale;
-            sharkHook.transform.localRotation = startRotation;
-            
-        }
+			grappleLR.enabled = false;
+		}
 
         if (grappleLetGo)
         {
             sharkHook.transform.position = Vector3.MoveTowards(sharkHook.transform.position, endOfGrappleGun.transform.position, 100 * Time.deltaTime);
         }
-
-        
 
 
         Debug.DrawRay(transform.position, transform.localToWorldMatrix * Vector3.back * 100,Color.white);
@@ -115,6 +102,7 @@ public class GrappleGun : MonoBehaviour
         if (grappleWall)
         {
             sharkHook.transform.position = Vector3.MoveTowards(sharkHook.transform.position, hook.transform.position, 150 * Time.deltaTime);
+            
 
             if (sharkHook.transform.position == hook.transform.position)
                 rb.AddExplosionForce(-force, hook.transform.position, 200);
@@ -139,6 +127,11 @@ public class GrappleGun : MonoBehaviour
             if (sharkHook.transform.position == hook.transform.position && rb)
                 rb.AddExplosionForce(-force, transform.position, 200);
         }
+
+        if(grappleWall || grappleObject || grappleEnemy) { // if grappling anything grappleable
+			Vector3[] tetherPositions = new Vector3[] { endOfGrappleGun.transform.position, sharkHook.transform.position }; // get tether endpoints
+			grappleLR.SetPositions(tetherPositions); // apply new positions for tether line renderer
+		}
 
 
     }
