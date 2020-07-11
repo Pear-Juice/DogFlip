@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Grappleable
+  - Enemy
+  - Object
   layers:
   - Default
   - TransparentFX
