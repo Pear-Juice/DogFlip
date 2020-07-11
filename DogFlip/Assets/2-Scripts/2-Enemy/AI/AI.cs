@@ -34,7 +34,6 @@ public class AI : MonoBehaviour {
 	void Shoot() {
 		Rigidbody bullet = Instantiate(bulletPrefab, gunBarrel.position, Quaternion.identity) as Rigidbody; // create bullet
 		bullet.velocity = gunBarrel.forward * 20f; // make bullet go brrrmmm // * 1f; is hardcode, replace with variable!
-		//bullet.OnCollisionEnter += ctx => Destoy(bullet.gameObject); // tell bullet destroy itself on collision
 		Destroy(bullet.gameObject, 3f); // give bullet lifetime, also hardcode!
 		shootTime = 0f;
 	}

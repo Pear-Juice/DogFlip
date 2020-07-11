@@ -141,9 +141,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   shootDistance: 20
-  projectilePrefab: {fileID: 1111548656368138427, guid: f4833d24028c652478086ff12b487c63,
+  turnSpeed: 140
+  bulletPrefab: {fileID: 1111548656368138427, guid: f4833d24028c652478086ff12b487c63,
     type: 3}
   gunBarrel: {fileID: 6587933073860878588}
+  shootDelay: 0.5
 --- !u!54 &6523496505612599686
 Rigidbody:
   m_ObjectHideFlags: 0
