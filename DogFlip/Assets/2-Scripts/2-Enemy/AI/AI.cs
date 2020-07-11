@@ -20,15 +20,15 @@ public class AI : MonoBehaviour {
 		// check if target in direct line of sight and within range
 		if(Physics.Raycast(transform.position, target.position-transform.position, out RaycastHit hit, shootDistance) && hit.collider.tag=="Player") {
 			agent.ResetPath(); // stop moving
-			Quaternion targetRotation = Quaternion.LookRotation(target.position - transform.position, Vector3.up);
-			transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
-			if(Quaternion.Angle(transform.rotation, targetRotation) < 15f && shootTime >= shootDelay) {
+			Quaternion targetRotation = Quaternion.LookRotation(target.position - transform.position, Vector3.up); // get look at target rotation
+			transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, turnSpeed * Time.deltaTime); // apply
+			if(Quaternion.Angle(transform.rotation, targetRotation) < 15f && shootTime >= shootDelay) { // check if target inside viewcone
 				Shoot();
 			}
 		} else {
 			agent.SetDestination(target.position); // find path to target and move
 		}
-		shootTime += Time.deltaTime;
+		shootTime += Time.deltaTime; // increase time since last shot
 	}
 
 	void Shoot() {

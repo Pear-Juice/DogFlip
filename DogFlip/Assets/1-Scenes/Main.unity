@@ -3940,7 +3940,7 @@ ParticleSystem:
     serializedVersion: 3
     type: 1
     collisionMode: 0
-    colliderForce: 0
+    colliderForce: 15
     multiplyColliderForceByParticleSize: 1
     multiplyColliderForceByParticleSpeed: 1
     multiplyColliderForceByCollisionAngle: 1
@@ -5866,6 +5866,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1640454314985616298, guid: 307db83f4e4eef242bce2d3e0b80fb6b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Projectile
+      objectReference: {fileID: 0}
     - target: {fileID: 6523496505612599683, guid: 307db83f4e4eef242bce2d3e0b80fb6b,
         type: 3}
       propertyPath: target
