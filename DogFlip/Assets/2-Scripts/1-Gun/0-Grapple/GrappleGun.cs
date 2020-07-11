@@ -91,13 +91,15 @@ public class GrappleGun : MonoBehaviour
 
         if (grappleObject)
         {
-            grappledObject.GetComponent<Rigidbody>().AddExplosionForce(-force, transform.position, 200);
+            Rigidbody rb = grappledObject.GetComponent<Rigidbody>();
+            if(rb) rb.AddExplosionForce(-force, transform.position, 200); // checks that grappleObject has rigidbody before applying force
         }
         
         if (grappleEnemy)
         {
-            grappledObject.GetComponent<Rigidbody>().AddExplosionForce(-force, transform.position, 200);
-        }
+			Rigidbody rb = grappledObject.GetComponent<Rigidbody>();
+            if(rb) rb.AddExplosionForce(-force, transform.position, 200); // checks that grappleObject has rigidbody before applying force
+		}
 
 
     }
