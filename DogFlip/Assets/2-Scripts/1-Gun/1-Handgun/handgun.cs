@@ -5,9 +5,7 @@ using UnityEngine;
 public class handgun : MonoBehaviour
 {
     public GameObject player;
-    public GameObject bulletPrefab;
     Rigidbody rb;
-
     public float weaponForce = 10;
 
     // Start is called before the first frame update

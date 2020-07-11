@@ -2,33 +2,22 @@
 
 public class PointToMouse : MonoBehaviour
 {
-    
-
+    Vector3 mousePos = new Vector3();
+    Vector3 screenCenter = new Vector3();
 
     // Start is called before the first frame update
     void Start()
     {
-
+        screenCenter.x = Screen.width / 2;
+        screenCenter.z = Screen.height/ 2;
     }
 
     // Update is called once per frame
     void Update()
     {
+        mousePos.x = Input.mousePosition.x - screenCenter.x;
+        mousePos.z = Input.mousePosition.y - screenCenter.z;
 
-        //Get the Screen positions of the object
-        Vector2 positionOnScreen = Camera.main.WorldToViewportPoint(transform.position);
-
-        //Get the Screen position of the mouse
-        Vector2 mouseOnScreen = (Vector2)Camera.main.ScreenToViewportPoint(Input.mousePosition);
-
-        //Get the angle between the points
-        float angle = AngleBetweenTwoPoints(positionOnScreen, mouseOnScreen);
-
-        transform.rotation = Quaternion.Euler(new Vector3(0f, -angle, 0f));
-    }
-
-    float AngleBetweenTwoPoints(Vector3 a, Vector3 b)
-    {
-        return Mathf.Atan2(a.y - b.y, a.x - b.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.FromToRotation(Vector3.left, mousePos);
     }
 }
