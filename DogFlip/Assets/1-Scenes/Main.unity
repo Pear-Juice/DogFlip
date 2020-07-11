@@ -204,6 +204,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: map
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ff91e99265243314480784a1e7790ed7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Grappleable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff91e99265243314480784a1e7790ed7, type: 3}
 --- !u!1 &559159215
