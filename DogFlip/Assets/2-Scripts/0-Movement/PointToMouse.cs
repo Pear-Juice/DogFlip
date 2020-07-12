@@ -4,6 +4,9 @@ public class PointToMouse : MonoBehaviour
 {
     Vector3 mousePos = new Vector3();
     Vector3 screenCenter = new Vector3();
+    public GameObject[] weapons;
+
+    int currentWeapon = 0;
 
     public float angle;
     public string lookDirection = "down";
@@ -36,5 +39,12 @@ public class PointToMouse : MonoBehaviour
         else if (angle >= -180 && angle < -135) lookDirection = "down-right";
 
         transform.rotation = Quaternion.FromToRotation(Vector3.left, mousePos);
+
+        if (Input.mouseScrollDelta.y != 0)
+        {
+            foreach (GameObject i in weapons) i.active = false;
+            currentWeapon = (int)Mathf.Repeat(currentWeapon + Input.mouseScrollDelta.y, weapons.Length);
+            weapons[currentWeapon].active = true;
+        }
     }
 }
