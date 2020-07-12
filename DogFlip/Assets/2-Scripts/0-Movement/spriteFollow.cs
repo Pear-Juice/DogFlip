@@ -29,8 +29,6 @@ public class spriteFollow : MonoBehaviour
         transform.position = model.transform.position + Vector3.left*0.5f;
 
         look = model.GetComponent<PointToMouse>().lookDirection;
-        
-        print(look);
 
         switch(look){
             case "up-left":
