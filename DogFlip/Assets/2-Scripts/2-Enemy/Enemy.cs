@@ -9,6 +9,8 @@ public class Enemy : MonoBehaviour
 
 	public GameObject explosionPrefab;
 
+    public GameObject spr;
+
     public void OnHit(int Damage)
     {
         Debug.Log("Hit Enemy");
@@ -26,5 +28,6 @@ public class Enemy : MonoBehaviour
 		GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
 		gameObject.SetActive(false);
 		Destroy(explosion, 3f);
+        Destroy(spr);
 	}
 }
