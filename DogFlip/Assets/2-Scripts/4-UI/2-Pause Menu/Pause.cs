@@ -7,11 +7,14 @@ public class Pause : MonoBehaviour
 {
     private int currentScene;
     public GameObject pauseMenu;
+    public GameObject settingsMenu;
 
     private void Start()
     {
         Time.timeScale = 1;
         pauseMenu.active = false;
+        settingsMenu.active = false;
+        
     }
 
     public void Update()
@@ -27,7 +30,9 @@ public class Pause : MonoBehaviour
             {
                 Time.timeScale = 1;
                 pauseMenu.active = false;
+                settingsMenu.active = false;
             }
+
         }
 
         if (Input.GetKeyDown(KeyCode.R))
