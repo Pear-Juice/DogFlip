@@ -10,4 +10,9 @@ public class Death : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+    public void quit()
+    {
+        SceneManager.LoadScene(SceneManager.GetSceneByBuildIndex(0));
+    }
 }
