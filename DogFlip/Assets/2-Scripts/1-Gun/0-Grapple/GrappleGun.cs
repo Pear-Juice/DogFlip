@@ -137,11 +137,13 @@ public class GrappleGun : MonoBehaviour
         {
             sharkHook.transform.position = Vector3.MoveTowards(sharkHook.transform.position, hook.transform.position, 150 * Time.deltaTime);
 
-            Rigidbody rb = grappledObject.GetComponent<Rigidbody>();
+            Rigidbody pb = grappledObject.GetComponent<Rigidbody>();
 
-            if (sharkHook.transform.position == hook.transform.position && rb)
+            if (sharkHook.transform.position == hook.transform.position && pb)
             {
-                rb.AddExplosionForce(-force, transform.position, 200);
+                pb.AddExplosionForce(-force, transform.position, 200);
+
+                rb.AddExplosionForce(-force, hook.transform.position, 200);
 
                 grappleObjectOnce++;
             }
@@ -152,11 +154,13 @@ public class GrappleGun : MonoBehaviour
         {
             sharkHook.transform.position = Vector3.MoveTowards(sharkHook.transform.position, hook.transform.position, 150 * Time.deltaTime);
 
-            Rigidbody rb = grappledObject.GetComponent<Rigidbody>();
+            Rigidbody pb = grappledObject.GetComponent<Rigidbody>();
 
-            if (sharkHook.transform.position == hook.transform.position && rb)
+            if (sharkHook.transform.position == hook.transform.position && pb)
             {
-                rb.AddExplosionForce(-force, transform.position, 200);
+                pb.AddExplosionForce(-force, transform.position, 200);
+
+                rb.AddExplosionForce(-force, hook.transform.position, 200);
 
                 grappleEnemyOnce++;
             }
