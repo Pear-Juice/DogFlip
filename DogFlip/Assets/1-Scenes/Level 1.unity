@@ -8370,7 +8370,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3ea82d5ef8a79c4bb3efa61ab261b6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyObject: {fileID: 1014087018}
   DeathScreen: {fileID: 0}
   Health: 30
 --- !u!114 &1880141209
@@ -11476,6 +11475,12 @@ PrefabInstance:
       propertyPath: Damage
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7714902868900285320, guid: 307db83f4e4eef242bce2d3e0b80fb6b,
+        type: 3}
+      propertyPath: explosionPrefab
+      value: 
+      objectReference: {fileID: 2241453140715290713, guid: e446bb3951546b242a28ca3e4713aa26,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 307db83f4e4eef242bce2d3e0b80fb6b, type: 3}
 --- !u!1 &6567798477627815794

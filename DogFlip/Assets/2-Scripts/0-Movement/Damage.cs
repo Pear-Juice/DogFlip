@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Damage : MonoBehaviour
 {
-    public GameObject EnemyObject;
+    GameObject EnemyObject;
 
     public GameObject DeathScreen; //reference to the death screen
 
