@@ -15,6 +15,11 @@ public class GrappleGun : MonoBehaviour
     bool grappleEnemy;
     bool grappleLetGo;
 
+
+    int grappleWallOnce = 0;
+    int grappleEnemyOnce = 0;
+    int grappleObjectOnce = 0;
+
     GameObject grappledObject;
 
     GameObject hook;
@@ -36,6 +41,8 @@ public class GrappleGun : MonoBehaviour
             {
                 Audio audio = GetComponent<Audio>();
                 audio.PlayGrapple();
+
+                audio.StartReel();
 
 
 				grappleLR.enabled = true;
@@ -90,27 +97,41 @@ public class GrappleGun : MonoBehaviour
             grappleLetGo = true;
 
 			grappleLR.enabled = false;
-		}
+
+            Audio audio = GetComponent<Audio>();
+            audio.StopReel();
+            audio.PlayGrappleReset();
+
+            grappleWallOnce = 0;
+            grappleEnemyOnce = 0;
+            grappleObjectOnce = 0;
+        }
 
         if (grappleLetGo)
         {
             sharkHook.transform.position = Vector3.MoveTowards(sharkHook.transform.position, endOfGrappleGun.transform.position, 100 * Time.deltaTime);
         }
 
-
         Debug.DrawRay(transform.position, transform.localToWorldMatrix * Vector3.back * 100,Color.white);
     }
 
     private void FixedUpdate()
     {
+        Audio audio = GetComponent<Audio>();
+
         if (grappleWall)
         {
             sharkHook.transform.position = Vector3.MoveTowards(sharkHook.transform.position, hook.transform.position, 150 * Time.deltaTime);
             
 
             if (sharkHook.transform.position == hook.transform.position)
+            {
                 rb.AddExplosionForce(-force, hook.transform.position, 200);
+
+                grappleWallOnce++;
+            }
         }
+                
 
         if (grappleObject)
         {
@@ -119,7 +140,12 @@ public class GrappleGun : MonoBehaviour
             Rigidbody rb = grappledObject.GetComponent<Rigidbody>();
 
             if (sharkHook.transform.position == hook.transform.position && rb)
+            {
                 rb.AddExplosionForce(-force, transform.position, 200);
+
+                grappleObjectOnce++;
+            }
+                
         }
         
         if (grappleEnemy)
@@ -129,7 +155,12 @@ public class GrappleGun : MonoBehaviour
             Rigidbody rb = grappledObject.GetComponent<Rigidbody>();
 
             if (sharkHook.transform.position == hook.transform.position && rb)
+            {
                 rb.AddExplosionForce(-force, transform.position, 200);
+
+                grappleEnemyOnce++;
+            }
+                
         }
 
         if(grappleWall || grappleObject || grappleEnemy) { // if grappling anything grappleable
@@ -137,6 +168,13 @@ public class GrappleGun : MonoBehaviour
 			grappleLR.SetPositions(tetherPositions); // apply new positions for tether line renderer
 		}
 
+        if (grappleWallOnce == 1)
+            audio.PlayGrappleHitWall();
 
+        if (grappleEnemyOnce == 1)
+            audio.PlayGrappleHitEnemy();
+
+        if (grappleObjectOnce == 1)
+            audio.PlayGrappleHitObject();
     }
 }

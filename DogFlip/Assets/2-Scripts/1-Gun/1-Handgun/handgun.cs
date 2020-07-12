@@ -24,6 +24,9 @@ public class handgun : MonoBehaviour
         if(Input.GetButtonDown("Fire1")){
 			ps.Emit(1);
 			rb.AddForce(-transform.forward * weaponForce, ForceMode.Impulse);
+
+            Audio audio = player.GetComponent<Audio>();
+            audio.PlayShoot();
         }
 
 

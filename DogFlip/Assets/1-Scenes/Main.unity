@@ -6147,8 +6147,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10ae5a35740aa0b429941dc2acfc2b54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grappleShoot: {fileID: 8300000, guid: ae6cdef630dd01040a575b31a0011167, type: 3}
-  grappleReel: {fileID: 0}
+  grappleShoot: {fileID: 8300000, guid: 6e315fa2c1aa0164bb285514e340d37b, type: 3}
+  grappleReel: {fileID: 8300000, guid: 3deb7033543dbf34e8ef7d48153a8db3, type: 3}
+  grappleReset: {fileID: 8300000, guid: 467ad0676a2021b48a6d8fb0e1a438c3, type: 3}
+  grappleHitWall: {fileID: 8300000, guid: a6dc875f2694ebe428cb012ae271b7d9, type: 3}
+  grappleHitEnemy: {fileID: 8300000, guid: f6c52be759e2be74cbffd581f4a36907, type: 3}
+  grappleHitObject: {fileID: 8300000, guid: b146f53b6cf1a6743a002995da151517, type: 3}
+  hit:
+  - {fileID: 8300000, guid: 6874c547080a01843872f5272117b840, type: 3}
+  - {fileID: 8300000, guid: f494903ab2bce7f49829b4bac49245f6, type: 3}
+  - {fileID: 8300000, guid: 797f1e5c31fd1854c85645056e086023, type: 3}
+  - {fileID: 8300000, guid: 349b10bbd76aaf444896b5cc083174bb, type: 3}
+  - {fileID: 8300000, guid: 7b15e5b526285304f971e74c304d30d5, type: 3}
+  - {fileID: 8300000, guid: 8e37547c0b8df784f998128b56d0f40a, type: 3}
+  death:
+  - {fileID: 8300000, guid: dfd9eb5c7c7ff254ebfc2070e8551ae4, type: 3}
+  - {fileID: 8300000, guid: 0d98a3203393ec740b8ae120d0e70b05, type: 3}
+  - {fileID: 8300000, guid: 760bdf97ccfa61c458421a1f3ce6151c, type: 3}
+  shootGun: {fileID: 0}
 --- !u!82 &1880141217
 AudioSource:
   m_ObjectHideFlags: 0
