@@ -8,12 +8,12 @@ public class Settings : MonoBehaviour
 {
     public AudioMixer audioMixer;
     Resolution[] resolutions;
-    //public Dropdown dropdown;
+    public Dropdown dropdown;
 
     void Start()
     {
         resolutions = Screen.resolutions;
-        //dropdown.ClearOptions();
+        dropdown.ClearOptions();
         List<string> options = new List<string>();
         int currentResolution = 0;
         for (int i = 0; i < resolutions.Length; i++)
@@ -26,9 +26,9 @@ public class Settings : MonoBehaviour
                 currentResolution = i;
             }
         }
-        //dropdown.AddOptions(options);
-        //dropdown.value = currentResolution;
-        //dropdown.RefreshShownValue();
+        dropdown.AddOptions(options);
+        dropdown.value = currentResolution;
+        dropdown.RefreshShownValue();
     }
 
     public void Volume(float volume)

@@ -6,6 +6,8 @@ public class Damage : MonoBehaviour
 {
     public GameObject EnemyObject;
 
+    public GameObject DeathScreen; //reference to the death screen
+
     public int Health;
 
     private void OnTriggerEnter(Collider other)
@@ -38,6 +40,8 @@ public class Damage : MonoBehaviour
     {
         Audio audio = GetComponent<Audio>();
         audio.PlayDeath();
+
+        DeathScreen.active = true;
 
         //gameObject.SetActive(false); 
     }
