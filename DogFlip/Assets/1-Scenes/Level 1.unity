@@ -2240,7 +2240,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 762523433}
   settingsMenu: {fileID: 120610260}
-  gun: {fileID: 1576425003}
 --- !u!4 &725400113
 Transform:
   m_ObjectHideFlags: 0
@@ -3276,6 +3275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1880141207}
+  turnSpeed: 0
 --- !u!1 &1014087018 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6523496505612599708, guid: 307db83f4e4eef242bce2d3e0b80fb6b,
@@ -9990,7 +9990,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3ea82d5ef8a79c4bb3efa61ab261b6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyObject: {fileID: 1014087018}
   DeathScreen: {fileID: 835769601}
   Health: 30
 --- !u!114 &1880141209

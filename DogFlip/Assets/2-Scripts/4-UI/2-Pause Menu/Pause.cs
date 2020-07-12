@@ -56,4 +56,9 @@ public class Pause : MonoBehaviour
         PlayerPrefs.SetInt("SavedScene", currentScene);
         SceneManager.LoadScene(0);
     }
+
+    public void nextLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
 }
