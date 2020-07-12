@@ -200,6 +200,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 165026889}
   m_CullTransparentMesh: 0
+--- !u!1 &171528620
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 171528622}
+  - component: {fileID: 171528621}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &171528621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171528620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9187c54d78bc828448eea7ccf5a9d4ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiestoKill:
+  - {fileID: 1014087018}
+  enemies: 999
+--- !u!4 &171528622
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171528620}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -29.499882, y: 59.837864, z: -88.30604}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &214609915
 GameObject:
   m_ObjectHideFlags: 0
@@ -2880,7 +2926,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 0c828f89fbb03f746aecfe245eef643b, type: 2}
-  dropdown: {fileID: 0}
 --- !u!4 &1843770260
 Transform:
   m_ObjectHideFlags: 0
@@ -5835,6 +5880,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2241453140715290713, guid: e446bb3951546b242a28ca3e4713aa26,
         type: 3}
+    - target: {fileID: 7714902868900285320, guid: 307db83f4e4eef242bce2d3e0b80fb6b,
+        type: 3}
+      propertyPath: spr
+      value: 
+      objectReference: {fileID: 1548703621}
+    - target: {fileID: 7714902868900285320, guid: 307db83f4e4eef242bce2d3e0b80fb6b,
+        type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 171528620}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 307db83f4e4eef242bce2d3e0b80fb6b, type: 3}
 --- !u!1 &6567798477627815794
