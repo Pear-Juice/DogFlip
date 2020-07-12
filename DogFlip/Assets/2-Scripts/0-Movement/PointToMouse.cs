@@ -42,9 +42,9 @@ public class PointToMouse : MonoBehaviour
 
         if (Input.mouseScrollDelta.y != 0)
         {
-            foreach (GameObject i in weapons) i.active = false;
+            foreach (GameObject i in weapons) i.SetActive(false);
             currentWeapon = (int)Mathf.Repeat(currentWeapon + Input.mouseScrollDelta.y, weapons.Length);
-            weapons[currentWeapon].active = true;
+            weapons[currentWeapon].SetActive(true);
         }
     }
 }
