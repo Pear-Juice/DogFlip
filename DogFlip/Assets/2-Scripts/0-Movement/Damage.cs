@@ -4,28 +4,16 @@ using UnityEngine;
 
 public class Damage : MonoBehaviour
 {
-    public GameObject EnemyObject;
 
     public GameObject DeathScreen; //reference to the death screen
 
     public int Health;
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Projectile")
-        {
-            Debug.Log("Shot");
-
-            TakeDamage();
-        }
-    }
-
-    void TakeDamage()
+    public void TakeDamage(int damage)
     {
         Audio audio = GetComponent<Audio>();
 
-        Enemy enemy = EnemyObject.GetComponent<Enemy>();
-        Health -= enemy.Damage;
+        Health -= damage;
 
         if (Health <= 0)
             Death();
