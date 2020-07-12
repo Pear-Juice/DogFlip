@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
     public int Damage;
 
 	public GameObject explosionPrefab;
-
+    public GameObject gm;
     public GameObject spr;
 
     public void OnHit(int Damage)
@@ -29,5 +29,6 @@ public class Enemy : MonoBehaviour
 		gameObject.SetActive(false);
 		Destroy(explosion, 3f);
         Destroy(spr);
+        gm.SendMessage("enemyDied");
 	}
 }
