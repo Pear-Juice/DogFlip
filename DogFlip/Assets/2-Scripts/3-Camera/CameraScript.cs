@@ -5,9 +5,10 @@ using UnityEngine;
 public class CameraScript : MonoBehaviour
 {
     public GameObject player;
+	public float turnSpeed;
 
-    // Start is called before the first frame update
-    void Start()
+	// Start is called before the first frame update
+	void Start()
     {
         
     }
@@ -16,5 +17,6 @@ public class CameraScript : MonoBehaviour
     void Update()
     {
         transform.position = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
-    }
+		transform.Rotate(Vector3.forward * turnSpeed * Time.deltaTime);
+	}
 }
