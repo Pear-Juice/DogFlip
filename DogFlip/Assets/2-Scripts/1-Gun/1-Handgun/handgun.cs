@@ -28,9 +28,6 @@ public class handgun : MonoBehaviour
             Audio audio = player.GetComponent<Audio>();
             audio.PlayShoot();
         }
-
-
-        
     }
 
     private void OnParticleCollision(GameObject other) {
