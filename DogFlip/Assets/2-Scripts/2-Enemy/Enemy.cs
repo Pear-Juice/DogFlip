@@ -34,6 +34,6 @@ public class Enemy : MonoBehaviour
 
     void Death()
     {
-        Destroy(this.gameObject);
-    }
+		gameObject.SetActive(false);
+	}
 }
