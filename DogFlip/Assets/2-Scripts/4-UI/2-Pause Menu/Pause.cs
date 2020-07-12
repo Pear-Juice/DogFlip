@@ -8,6 +8,7 @@ public class Pause : MonoBehaviour
     private int currentScene;
     public GameObject pauseMenu;
     public GameObject settingsMenu;
+    public GameObject gun;
 
     private void Start()
     {
@@ -25,12 +26,14 @@ public class Pause : MonoBehaviour
             {
                 Time.timeScale = 0;
                 pauseMenu.active = true;
+                gun.GetComponent<handgun>().enabled = false;
             }
             else if (Time.timeScale == 0)
             {
                 Time.timeScale = 1;
                 pauseMenu.active = false;
                 settingsMenu.active = false;
+                gun.GetComponent<handgun>().enabled = true;
             }
 
         }
@@ -44,6 +47,7 @@ public class Pause : MonoBehaviour
     public void Resume()
     {
         Time.timeScale = 1;
+        gun.GetComponent<handgun>().enabled = true;
     }
 
     public void exitToMenu()
