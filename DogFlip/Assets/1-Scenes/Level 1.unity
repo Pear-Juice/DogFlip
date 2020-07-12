@@ -8453,7 +8453,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: dfd9eb5c7c7ff254ebfc2070e8551ae4, type: 3}
   - {fileID: 8300000, guid: 0d98a3203393ec740b8ae120d0e70b05, type: 3}
   - {fileID: 8300000, guid: 760bdf97ccfa61c458421a1f3ce6151c, type: 3}
-  shootGun: {fileID: 0}
+  shootGun: {fileID: 8300000, guid: 649037df3d2b55c4f9e8553cec288e31, type: 3}
 --- !u!82 &1880141217
 AudioSource:
   m_ObjectHideFlags: 0
