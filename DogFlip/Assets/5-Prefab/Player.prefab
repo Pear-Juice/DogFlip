@@ -5363,6 +5363,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70aa9b6c710a0f14589cc4e10cc496b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weapons:
+  - {fileID: 3021738236756975316}
+  - {fileID: 1080557533}
   angle: 0
   lookDirection: down
 --- !u!114 &3021738237755797458
