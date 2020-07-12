@@ -18,10 +18,11 @@ public class PointToMouse : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        mousePos.x = Input.mousePosition.x - screenCenter.x;
-        mousePos.z = Input.mousePosition.y - screenCenter.z;
+		mousePos.x = Input.mousePosition.x - screenCenter.x;
+		mousePos.z = Input.mousePosition.y - screenCenter.z;
+		Camera cam = Camera.main;
 
-        angle = Vector3.SignedAngle(Vector3.left, mousePos, Vector3.up) - 22.5f;
+		angle = Vector3.SignedAngle(Vector3.left, mousePos, Vector3.up) - 22.5f;
 
              if (angle >= 0 && angle < 45) lookDirection = "up-left";
         else if (angle >= 45 && angle < 90) lookDirection = "up";

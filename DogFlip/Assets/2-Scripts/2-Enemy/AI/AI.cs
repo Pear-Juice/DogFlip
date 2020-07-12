@@ -6,6 +6,7 @@ public class AI : MonoBehaviour {
 
 	public Transform target;
 	public float shootDistance; // min range to get to before agent stops moving towards and starts shooting
+	public float retreatDistance; // if player closer than this range, run away
 	public float turnSpeed;
 	public Rigidbody bulletPrefab; // prefab to use for bullet instantiation
 	public Transform gunBarrel; // point of firing bullets
@@ -25,6 +26,7 @@ public class AI : MonoBehaviour {
 			if(Quaternion.Angle(transform.rotation, targetRotation) < 15f && shootTime >= shootDelay) { // check if target inside viewcone
 				Shoot();
 			}
+			if(Vector3.Distance(transform.position, target.position)<retreatDistance) agent.Move(-(target.position - transform.position).normalized * agent.speed * Time.deltaTime);
 		} else {
 			agent.SetDestination(target.position); // find path to target and move
 		}
@@ -43,5 +45,7 @@ public class AI : MonoBehaviour {
 		Gizmos.DrawWireSphere(transform.position, shootDistance);
 		Gizmos.color = Color.red;
 		Gizmos.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * shootDistance);
+		Gizmos.color = Color.blue;
+		Gizmos.DrawWireSphere(transform.position, retreatDistance);
 	}
 }
