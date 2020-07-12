@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
@@ -16,12 +17,18 @@ public class MainMenu : MonoBehaviour
     {
         sceneContinue = PlayerPrefs.GetInt("SavedScene");
 
-        if(sceneContinue != 0)
-        
-        SceneManager.LoadScene(sceneContinue);
+        if (sceneContinue != 0)
+
+            SceneManager.LoadScene(sceneContinue);
         else return;
-        
+
     }
+
+    public void LevelSelect(string levelName)
+    {
+        SceneManager.LoadScene(levelName);
+    }
+
 
     public void GameExit()
     {
