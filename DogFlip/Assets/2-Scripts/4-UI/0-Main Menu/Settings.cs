@@ -41,9 +41,10 @@ public class Settings : MonoBehaviour
         Screen.fullScreen = isFull;
     }
 
-    public void SetResolution(int resoltuionIndex)
+    public void SetResolution()
     {
-        Resolution resolution = resolutions[resoltuionIndex];
+        Resolution resolution = resolutions[dropdown.value];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
-    }
+		Debug.Log("Set " + resolution + " as new resolution");
+	}
 }
