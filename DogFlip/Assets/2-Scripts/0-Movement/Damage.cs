@@ -20,15 +20,25 @@ public class Damage : MonoBehaviour
 
     void TakeDamage()
     {
+        Audio audio = GetComponent<Audio>();
+
         Enemy enemy = EnemyObject.GetComponent<Enemy>();
         Health -= enemy.Damage;
 
         if (Health <= 0)
             Death();
+
+        if (Health > 0)
+        {
+            audio.PlayHit();
+        }
     }
 
     void Death()
     {
-		gameObject.SetActive(false);
-	}
+        Audio audio = GetComponent<Audio>();
+        audio.PlayDeath();
+
+        //gameObject.SetActive(false); 
+    }
 }
