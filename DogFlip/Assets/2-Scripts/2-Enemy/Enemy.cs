@@ -7,18 +7,9 @@ public class Enemy : MonoBehaviour
     public int Health;
     public int Damage;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    
+	public GameObject explosionPrefab;
+    public GameObject gm;
+    public GameObject spr;
 
     public void OnHit(int Damage)
     {
@@ -34,6 +25,10 @@ public class Enemy : MonoBehaviour
 
     void Death()
     {
-        Destroy(this.gameObject);
-    }
+		GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+		gameObject.SetActive(false);
+		Destroy(explosion, 3f);
+        Destroy(spr);
+        gm.SendMessage("enemyDied");
+	}
 }

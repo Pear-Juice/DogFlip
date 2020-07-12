@@ -1,0 +1,410 @@
+fileFormatVersion: 2
+guid: 72397b7c32a61114da10c19b79fb3974
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8556058182401001962
+    second: Coffee front shoot_0
+  - first:
+      213: -2823683826639099499
+    second: Coffee front shoot_1
+  - first:
+      213: 145066630698494457
+    second: Coffee front shoot_2
+  - first:
+      213: -7440182699463060086
+    second: Coffee front shoot_3
+  - first:
+      213: -8602644117894298174
+    second: Coffee front shoot_4
+  - first:
+      213: 7849766676462683211
+    second: Coffee front shoot_5
+  - first:
+      213: -8215508736936745752
+    second: Coffee front shoot_6
+  - first:
+      213: 1161879710059753802
+    second: Coffee front shoot_7
+  - first:
+      213: -1135249557105167047
+    second: Coffee front shoot_8
+  - first:
+      213: -869738983858064545
+    second: Coffee front shoot_9
+  - first:
+      213: 6972188004112886024
+    second: Coffee front shoot_10
+  - first:
+      213: -580513538707411215
+    second: Coffee front shoot_11
+  - first:
+      213: 3320965659221158026
+    second: Coffee front shoot_12
+  - first:
+      213: 5735324614413102733
+    second: Coffee front shoot_13
+  - first:
+      213: 2400553799956346830
+    second: Coffee front shoot_14
+  - first:
+      213: -5799757867189505817
+    second: Coffee front shoot_15
+  - first:
+      213: 4924248330538199149
+    second: Coffee front shoot_16
+  - first:
+      213: -7942149049488537983
+    second: Coffee front shoot_17
+  - first:
+      213: 4857566865403474128
+    second: Coffee front shoot_18
+  - first:
+      213: 2434002646130322395
+    second: Coffee front shoot_19
+  - first:
+      213: 5193914752986919267
+    second: Coffee front shoot_20
+  - first:
+      213: -7855987783726448123
+    second: Coffee front shoot_21
+  - first:
+      213: 2310427150748933878
+    second: Coffee front shoot_22
+  - first:
+      213: -4916617804261468559
+    second: Coffee front shoot_23
+  - first:
+      213: -3715184870453253762
+    second: Coffee front shoot_24
+  - first:
+      213: -3713711461076523758
+    second: Coffee front shoot_25
+  - first:
+      213: -846653100654894516
+    second: Coffee front shoot_26
+  - first:
+      213: 405818992315583676
+    second: Coffee front shoot_27
+  - first:
+      213: 4362613563816910530
+    second: Coffee front shoot_28
+  - first:
+      213: 1450020623019366122
+    second: Coffee front shoot_29
+  - first:
+      213: 1166609753400242305
+    second: Coffee front shoot_30
+  - first:
+      213: 2981587179121097419
+    second: Coffee front shoot_31
+  - first:
+      213: -1924597160567383413
+    second: Coffee front shoot_32
+  - first:
+      213: -6892201975666571186
+    second: Coffee front shoot_33
+  - first:
+      213: -8639644593642767146
+    second: Coffee front shoot_34
+  - first:
+      213: -11451904810540508
+    second: Coffee front shoot_35
+  - first:
+      213: -2142005528424279186
+    second: Coffee front shoot_36
+  - first:
+      213: 5768115296799768738
+    second: Coffee front shoot_37
+  - first:
+      213: 1261913956653706205
+    second: Coffee front shoot_38
+  - first:
+      213: -2560346587855411921
+    second: Coffee front shoot_39
+  - first:
+      213: 7268225901827817155
+    second: Coffee front shoot_40
+  - first:
+      213: -6467163099422232758
+    second: Coffee front shoot_41
+  - first:
+      213: 5686147876559997022
+    second: Coffee front shoot_42
+  - first:
+      213: 2008788616129386903
+    second: Coffee front shoot_43
+  - first:
+      213: -3956065125442583029
+    second: Coffee front shoot_44
+  - first:
+      213: 36266964158688309
+    second: Coffee front shoot_45
+  - first:
+      213: -9036097184186343208
+    second: Coffee front shoot_46
+  - first:
+      213: -6006218866634195154
+    second: Coffee front shoot_47
+  - first:
+      213: 1473973966277578216
+    second: Coffee front shoot_48
+  - first:
+      213: 326834108987953717
+    second: Coffee front shoot_49
+  - first:
+      213: 1933711674760726657
+    second: Coffee front shoot_50
+  - first:
+      213: 5778120183461364102
+    second: Coffee front shoot_51
+  - first:
+      213: -199979684954589921
+    second: Coffee front shoot_52
+  - first:
+      213: -7208720279001294247
+    second: Coffee front shoot_53
+  - first:
+      213: -2848501165162887204
+    second: Coffee front shoot_54
+  - first:
+      213: -3874452293595337870
+    second: Coffee front shoot_55
+  - first:
+      213: 1528884335277421147
+    second: Coffee front shoot_56
+  - first:
+      213: -7138042360715167742
+    second: Coffee front shoot_57
+  - first:
+      213: 5981636671200354331
+    second: Coffee front shoot_58
+  - first:
+      213: 8708659498768564748
+    second: Coffee front shoot_59
+  - first:
+      213: -8748646433234048225
+    second: Coffee front shoot_60
+  - first:
+      213: 3754377270409296570
+    second: Coffee front shoot_61
+  - first:
+      213: -3583572568936512918
+    second: Coffee front shoot_62
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 0
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 256
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Coffee front shoot_0
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 511
+        width: 129
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 616f9604a66c24980800000000000000
+      internalID: -8556058182401001962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coffee front shoot_1
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 511
+        width: 130
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 599292b258240d8d0800000000000000
+      internalID: -2823683826639099499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coffee front shoot_2
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 255
+        width: 129
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f9eb8ff451630200800000000000000
+      internalID: 145066630698494457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coffee front shoot_3
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 255
+        width: 130
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a855f7e21492fb890800000000000000
+      internalID: -7440182699463060086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coffee front shoot_4
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 0
+        width: 129
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c58ec7e0c44d9880800000000000000
+      internalID: -8602644117894298174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
