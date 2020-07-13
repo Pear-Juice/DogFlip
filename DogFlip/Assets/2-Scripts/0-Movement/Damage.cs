@@ -30,6 +30,7 @@ public class Damage : MonoBehaviour
         audio.PlayDeath();
 
         DeathScreen.active = true;
+        Time.timeScale = 0;
 
         //gameObject.SetActive(false); 
     }
