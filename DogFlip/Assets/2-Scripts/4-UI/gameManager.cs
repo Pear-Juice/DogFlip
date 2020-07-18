@@ -5,14 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class gameManager : MonoBehaviour
 {
-
-    public GameObject[] enemiestoKill;
-    public int enemies = 999;
-    // Start is called before the first frame update
-    void Start()
-    {
-        enemies = enemiestoKill.Length;
-    }
+    public int enemies;
 
     // Update is called once per frame
     void Update()
