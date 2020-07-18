@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Pause : MonoBehaviour
 {
     private int currentScene;
+    private int nextScene;
     public GameObject pauseMenu;
     public GameObject settingsMenu;
     public GameObject gun;
@@ -60,5 +61,12 @@ public class Pause : MonoBehaviour
     public void nextLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void winExit()
+    {
+        nextScene = SceneManager.GetActiveScene().buildIndex + 1;
+        PlayerPrefs.SetInt("SavedScene", nextScene);
+        SceneManager.LoadScene(0);
     }
 }
