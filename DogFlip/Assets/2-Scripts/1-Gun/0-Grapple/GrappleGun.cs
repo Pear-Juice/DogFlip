@@ -14,6 +14,7 @@ public class GrappleGun : MonoBehaviour
     bool grappleObject;
     bool grappleEnemy;
     bool grappleLetGo;
+    bool grappleGrab;
 
 
     int grappleWallOnce = 0;
@@ -105,6 +106,8 @@ public class GrappleGun : MonoBehaviour
             grappleWallOnce = 0;
             grappleEnemyOnce = 0;
             grappleObjectOnce = 0;
+
+            grappleGrab = false;
         }
 
         if (grappleLetGo)
@@ -126,6 +129,11 @@ public class GrappleGun : MonoBehaviour
 
             if (sharkHook.transform.position == hook.transform.position)
             {
+                grappleGrab = true;
+            }
+
+            if (grappleGrab)
+            {
                 rb.AddExplosionForce(-force, hook.transform.position, 200);
 
                 grappleWallOnce++;
@@ -141,13 +149,17 @@ public class GrappleGun : MonoBehaviour
 
             if (sharkHook.transform.position == hook.transform.position && pb)
             {
+                grappleGrab = true;
+            }
+
+            if (grappleGrab)
+            {
                 pb.AddExplosionForce(-force, transform.position, 200);
 
                 rb.AddExplosionForce(-force, hook.transform.position, 200);
 
                 grappleObjectOnce++;
             }
-                
         }
         
         if (grappleEnemy)
@@ -158,16 +170,22 @@ public class GrappleGun : MonoBehaviour
 
             if (sharkHook.transform.position == hook.transform.position && pb)
             {
+                grappleGrab = true;
+            }
+
+            if (grappleGrab)
+            {
                 pb.AddExplosionForce(-force, transform.position, 200);
 
                 rb.AddExplosionForce(-force, hook.transform.position, 200);
 
                 grappleEnemyOnce++;
             }
-                
         }
 
-        if(grappleWall || grappleObject || grappleEnemy) { // if grappling anything grappleable
+        Debug.Log(grappleGrab);
+
+        if (grappleWall || grappleObject || grappleEnemy) { // if grappling anything grappleable
 			Vector3[] tetherPositions = new Vector3[] { endOfGrappleGun.transform.position, sharkHook.transform.position }; // get tether endpoints
 			grappleLR.SetPositions(tetherPositions); // apply new positions for tether line renderer
 		}
