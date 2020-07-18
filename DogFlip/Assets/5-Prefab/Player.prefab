@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 112664480}
   - component: {fileID: 112664482}
   - component: {fileID: 112664481}
+  - component: {fileID: 112664483}
   m_Layer: 0
   m_Name: Barrel End
   m_TagString: Untagged
@@ -105,7 +106,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 112664479}
   serializedVersion: 6
-  lengthInSec: 2
+  lengthInSec: 1
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 3
@@ -233,7 +234,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 15.06
+      scalar: 60
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -349,7 +350,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.22
+      scalar: 0.07
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -723,7 +724,7 @@ ParticleSystem:
         m_RotationOrder: 4
   ShapeModule:
     serializedVersion: 6
-    enabled: 1
+    enabled: 0
     type: 10
     angle: 14.87
     length: 5
@@ -1040,7 +1041,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 5
+        scalar: 1
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -4000,7 +4001,7 @@ ParticleSystem:
         m_RotationOrder: 4
     maxLights: 20
   TrailModule:
-    enabled: 0
+    enabled: 1
     mode: 0
     ratio: 1
     lifetime:
@@ -4813,6 +4814,23 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!114 &112664483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112664479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a12f25570d655a94880f273a8d160f76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 3021738237755797468}
+  pulledBackBow: {fileID: 21300000, guid: 6711731560d316d4e8d370da06d6446f, type: 3}
+  Bow: {fileID: 21300000, guid: 732cb4208925c4042a3fcdbf4fec61a7, type: 3}
+  Damage: 50
+  weaponForce: 10
 --- !u!1 &168535861
 GameObject:
   m_ObjectHideFlags: 0
@@ -4839,8 +4857,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 168535861}
   m_LocalRotation: {x: -0, y: 0.70710784, z: -0, w: 0.70710576}
-  m_LocalPosition: {x: 0.113, y: 0, z: 0}
-  m_LocalScale: {x: 0.19027, y: 0.22152, z: 0.3968}
+  m_LocalPosition: {x: 0.113, y: 0.014, z: 0}
+  m_LocalScale: {x: 0.51332915, y: 0.2805551, z: 0.5025472}
   m_Children:
   - {fileID: 1756908705}
   - {fileID: 6571871686984334102}
@@ -10251,7 +10269,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.6981132, g: 0.6981132, b: 0.6981132, a: 1}
+      maxColor: {r: 0.09433961, g: 0.09433961, b: 0.09433961, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -10313,7 +10331,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.22
+      scalar: 0.62
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -14816,13 +14834,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2297141106640683292}
-  m_LocalRotation: {x: 0.50000143, y: 0.49999857, z: 0.499997, w: -0.50000304}
+  m_LocalRotation: {x: 0.7071058, y: -0.0000020861623, z: -0.0000022947786, w: -0.70710784}
   m_LocalPosition: {x: -0.021016788, y: 0.09931415, z: 0.052915823}
-  m_LocalScale: {x: 2.5201612, y: 5.2556877, z: 4.5142636}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 168535862}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -89.99999, y: -180, z: -90}
+  m_LocalEulerAnglesHint: {x: -89.99999, y: -180, z: -180}
 --- !u!212 &8322351385278307823
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14862,7 +14880,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b990f9af4c58b604f936c7e8d16c4bd4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ddd7d3a9fe633ed45bdf9bd37b63691b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -14898,8 +14916,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2461960415528960578}
   m_LocalRotation: {x: 0.50000143, y: 0.49999857, z: 0.499997, w: -0.50000304}
-  m_LocalPosition: {x: -0.021016788, y: 0.09931415, z: -0.4470842}
-  m_LocalScale: {x: 2.5201612, y: 5.2556877, z: 4.5142627}
+  m_LocalPosition: {x: -0.02, y: 0.09931415, z: -0.355}
+  m_LocalScale: {x: -9.105229, y: 16.131287, z: 13.855628}
   m_Children: []
   m_Father: {fileID: 112664480}
   m_RootOrder: 0
@@ -14943,7 +14961,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b990f9af4c58b604f936c7e8d16c4bd4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 732cb4208925c4042a3fcdbf4fec61a7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -20737,7 +20755,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 73d7b684939d61b448ea1088bc593305, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f2ea0bc09363cd544b599072a0a1a0c5, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.32
   m_Pitch: 1
@@ -20847,13 +20865,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7748772918445543515}
-  m_LocalRotation: {x: 0.50000143, y: 0.49999857, z: 0.499997, w: -0.50000304}
-  m_LocalPosition: {x: -0.021016788, y: 0.09931415, z: 0.052915823}
-  m_LocalScale: {x: 2.5201612, y: 5.2556877, z: 4.514264}
+  m_LocalRotation: {x: -0, y: -0.70710695, z: -0.70710665, w: 0}
+  m_LocalPosition: {x: 0.03, y: 0.09931415, z: 0.053}
+  m_LocalScale: {x: 8.392, y: 8.392, z: 8.392}
   m_Children: []
   m_Father: {fileID: 1080557534}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -89.99999, y: -180, z: -90}
+  m_LocalEulerAnglesHint: {x: -89.99999, y: -180, z: 0}
 --- !u!212 &416069926530349647
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20893,7 +20911,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b990f9af4c58b604f936c7e8d16c4bd4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3abc4926a7205e24aae69c9acd895159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

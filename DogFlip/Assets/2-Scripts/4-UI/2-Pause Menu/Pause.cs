@@ -26,14 +26,14 @@ public class Pause : MonoBehaviour
             {
                 Time.timeScale = 0;
                 pauseMenu.active = true;
-                gun.GetComponent<handgun>().enabled = false;
+                gun.SetActive(false);
             }
             else if (Time.timeScale == 0)
             {
                 Time.timeScale = 1;
                 pauseMenu.active = false;
                 settingsMenu.active = false;
-                gun.GetComponent<handgun>().enabled = true;
+                gun.SetActive(true);
             }
 
         }

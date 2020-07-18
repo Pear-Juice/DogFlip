@@ -1529,6 +1529,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 762523433}
   settingsMenu: {fileID: 1078598260}
+  gun: {fileID: 731341587}
 --- !u!4 &725400113
 Transform:
   m_ObjectHideFlags: 0
@@ -1556,7 +1557,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 0c828f89fbb03f746aecfe245eef643b, type: 2}
-  dropdown: {fileID: 0}
 --- !u!1001 &731341586
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1630,6 +1630,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 510ca33b079ebd6418ec643e287c477f, type: 3}
+--- !u!1 &731341587 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3021738238166922142, guid: 510ca33b079ebd6418ec643e287c477f,
+    type: 3}
+  m_PrefabInstance: {fileID: 731341586}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &762523433
 GameObject:
   m_ObjectHideFlags: 0
