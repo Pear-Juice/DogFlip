@@ -47,7 +47,7 @@ public class Pause : MonoBehaviour
     public void Resume()
     {
         Time.timeScale = 1;
-        gun.GetComponent<handgun>().enabled = true;
+        gun.SetActive(true);
     }
 
     public void exitToMenu()
