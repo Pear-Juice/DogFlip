@@ -970,6 +970,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 4dc937c1bc66c514796a2057c5bdbedf, type: 2}
+  dropdown: {fileID: 2018623431}
 --- !u!1 &154602607
 GameObject:
   m_ObjectHideFlags: 0
@@ -5735,17 +5736,7 @@ MonoBehaviour:
   m_ItemImage: {fileID: 0}
   m_Value: 0
   m_Options:
-    m_Options:
-    - m_Text: 640
-      m_Image: {fileID: 21300000, guid: a3f72ffe82c5f474ab1aa1d26d282dd6, type: 3}
-    - m_Text: 800x600
-      m_Image: {fileID: 21300000, guid: b106b7a42b0680d4096b691e50e05107, type: 3}
-    - m_Text: 1024x768
-      m_Image: {fileID: 21300000, guid: 02c998b7e26afce4f9d03e0890a9256e, type: 3}
-    - m_Text: 1280x720
-      m_Image: {fileID: 21300000, guid: 9435834bda580e84eb512437c513f777, type: 3}
-    - m_Text: 1366x768
-      m_Image: {fileID: 21300000, guid: 1c0dde139065a3f4a9a07ecbeea7d792, type: 3}
+    m_Options: []
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
