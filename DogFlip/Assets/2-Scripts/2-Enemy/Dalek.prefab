@@ -49,7 +49,7 @@ GameObject:
   m_Layer: 8
   m_Name: Dalek
   m_TagString: Enemy
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 109df276a4e1bfd47822195d7998c6f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 5
+  Health: 65
   Damage: 1
   explosionPrefab: {fileID: 2241453140715290713, guid: e446bb3951546b242a28ca3e4713aa26,
     type: 3}

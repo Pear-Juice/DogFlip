@@ -4829,8 +4829,9 @@ MonoBehaviour:
   player: {fileID: 3021738237755797468}
   pulledBackBow: {fileID: 21300000, guid: 6711731560d316d4e8d370da06d6446f, type: 3}
   Bow: {fileID: 21300000, guid: 732cb4208925c4042a3fcdbf4fec61a7, type: 3}
-  Damage: 50
-  weaponForce: 10
+  Damage: 60
+  waitTime: 0.5
+  weaponForce: 0
 --- !u!1 &168535861
 GameObject:
   m_ObjectHideFlags: 0
@@ -5952,7 +5953,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 3
+        scalar: 5
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -9739,7 +9740,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 3021738237755797468}
   Damage: 10
-  weaponForce: 0.2
+  weaponForce: 0.05
 --- !u!1 &469510115
 GameObject:
   m_ObjectHideFlags: 0
@@ -10215,7 +10216,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 15.06
+      scalar: 53.6
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -10850,7 +10851,7 @@ ParticleSystem:
           m_PostInfinity: 2
           m_RotationOrder: 4
     arc:
-      value: 31.29
+      value: 71.4
       mode: 0
       spread: 0
       speed:
@@ -11022,7 +11023,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 5
+        scalar: 1
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -14808,8 +14809,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 3021738237755797468}
-  Damage: 3
-  weaponForce: 25
+  Damage: 50
+  weaponForce: 15
 --- !u!1 &2297141106640683292
 GameObject:
   m_ObjectHideFlags: 0
@@ -14917,7 +14918,7 @@ Transform:
   m_GameObject: {fileID: 2461960415528960578}
   m_LocalRotation: {x: 0.50000143, y: 0.49999857, z: 0.499997, w: -0.50000304}
   m_LocalPosition: {x: -0.02, y: 0.09931415, z: -0.355}
-  m_LocalScale: {x: -9.105229, y: 16.131287, z: 13.855628}
+  m_LocalScale: {x: 11.059212, y: 16.131287, z: 13.855628}
   m_Children: []
   m_Father: {fileID: 112664480}
   m_RootOrder: 0
@@ -20713,7 +20714,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 3021738237755797468}
   Damage: 20
-  weaponForce: 10
+  weaponForce: 5
 --- !u!1 &6627241296727896816
 GameObject:
   m_ObjectHideFlags: 0

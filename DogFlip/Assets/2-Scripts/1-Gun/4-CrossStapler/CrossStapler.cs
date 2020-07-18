@@ -12,6 +12,7 @@ public class CrossStapler : MonoBehaviour
     public Sprite Bow;
 
     public int Damage;
+    public float waitTime;
     public float weaponForce = 10;
 
     bool isPulledBack;
@@ -54,7 +55,7 @@ public class CrossStapler : MonoBehaviour
 
     IEnumerator pullBack()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(waitTime);
 
         isPulledBack = true;
     }
