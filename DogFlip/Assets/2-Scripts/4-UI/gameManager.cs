@@ -6,13 +6,15 @@ using UnityEngine.SceneManagement;
 public class gameManager : MonoBehaviour
 {
     public int enemies;
+    public GameObject winScreen;
 
     // Update is called once per frame
     void Update()
     {
         if (enemies <= 0)
         {
-            StartCoroutine("nextLevel");
+
+            StartCoroutine(nextLevel());
         }
     }
 
@@ -23,10 +25,14 @@ public class gameManager : MonoBehaviour
 
     private IEnumerator nextLevel()
     {
-        while (true)
-        {
-            yield return new WaitForSeconds(1f);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
+        yield return new WaitForSeconds(1f);
+        winScreen.SetActive(true);
     }
 }
+
+//public void exitToMenu()
+  //  {
+       // currentScene = SceneManager.GetActiveScene().buildIndex;
+       // PlayerPrefs.SetInt("SavedScene", currentScene);
+        //SceneManager.LoadScene(0);
+        //}
