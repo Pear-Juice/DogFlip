@@ -143,6 +143,7 @@ MonoBehaviour:
   target: {fileID: 0}
   shootDistance: 20
   retreatDistance: 8
+  sightDistance: 35
   turnSpeed: 140
   bulletPrefab: {fileID: 1111548656368138427, guid: f4833d24028c652478086ff12b487c63,
     type: 3}

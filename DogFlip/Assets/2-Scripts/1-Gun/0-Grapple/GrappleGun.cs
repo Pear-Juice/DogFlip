@@ -36,7 +36,10 @@ public class GrappleGun : MonoBehaviour
     {
         RaycastHit Hit;
 
-        if (Physics.BoxCast(transform.position, new Vector3(.1f, .1f, .5f), -transform.forward * 200, out Hit))
+        //Physics.BoxCast(transform.position, new Vector3(.1f, .1f, .5f), -transform.forward * 200, out Hit)
+        
+
+        if (Physics.Raycast(transform.position, -transform.forward * 200, out Hit))
         {
             if (Input.GetMouseButtonDown(1))
             {
@@ -182,8 +185,6 @@ public class GrappleGun : MonoBehaviour
                 grappleEnemyOnce++;
             }
         }
-
-        Debug.Log(grappleGrab);
 
         if (grappleWall || grappleObject || grappleEnemy) { // if grappling anything grappleable
 			Vector3[] tetherPositions = new Vector3[] { endOfGrappleGun.transform.position, sharkHook.transform.position }; // get tether endpoints
