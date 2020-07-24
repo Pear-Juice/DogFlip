@@ -57,6 +57,7 @@ public class Damage : MonoBehaviour
         DeathScreen.active = true;
         Time.timeScale = 0;
 
+
         //gameObject.SetActive(false); 
     }
 }

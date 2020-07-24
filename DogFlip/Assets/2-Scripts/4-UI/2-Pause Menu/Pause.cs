@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour
@@ -10,13 +11,16 @@ public class Pause : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject settingsMenu;
     public GameObject gun;
+    public GameObject deathScreen;
+    public GameObject winScreen;
 
     private void Start()
     {
         Time.timeScale = 1;
-        pauseMenu.active = false;
-        settingsMenu.active = false;
-
+        pauseMenu.SetActive(false);
+        settingsMenu.SetActive(false);
+        deathScreen.SetActive(false);
+        winScreen.SetActive(false);
     }
 
     public void Update()
@@ -38,6 +42,8 @@ public class Pause : MonoBehaviour
             }
 
         }
+        
+        
 
         if (Input.GetKeyDown(KeyCode.R))
         {

@@ -854,7 +854,7 @@ GameObject:
   - component: {fileID: 130827842}
   - component: {fileID: 130827841}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Dummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -871,7 +871,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.22275324, y: 0.46016622, z: 0.22275324}
   m_Children: []
-  m_Father: {fileID: 502421205}
+  m_Father: {fileID: 441377654}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1063,7 +1063,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1309370377}
         m_MethodName: retry
         m_Mode: 1
         m_Arguments:
@@ -1674,9 +1674,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 0
+      - m_Target: {fileID: 1309370378}
+        m_MethodName: SetResolution
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1754,7 +1754,7 @@ RectTransform:
   - {fileID: 1121395005}
   - {fileID: 454886996}
   m_Father: {fileID: 502421205}
-  m_RootOrder: 6
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1916,7 +1916,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1309370377}
         m_MethodName: quit
         m_Mode: 1
         m_Arguments:
@@ -1998,7 +1998,7 @@ GameObject:
   - component: {fileID: 324686694}
   - component: {fileID: 324686693}
   m_Layer: 5
-  m_Name: Place Holder
+  m_Name: You Win!
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2362,7 +2362,7 @@ RectTransform:
   - {fileID: 173027840}
   - {fileID: 301912441}
   m_Father: {fileID: 502421205}
-  m_RootOrder: 5
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2509,6 +2509,44 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 423770901}
   m_CullTransparentMesh: 0
+--- !u!1 &441377653
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 441377654}
+  m_Layer: 5
+  m_Name: HUD
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &441377654
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441377653}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 709337886}
+  - {fileID: 130827840}
+  - {fileID: 2141872332}
+  m_Father: {fileID: 502421205}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &454886995
 GameObject:
   m_ObjectHideFlags: 0
@@ -2925,13 +2963,11 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 709337886}
-  - {fileID: 130827840}
-  - {fileID: 2141872332}
   - {fileID: 1202066521}
   - {fileID: 773116835}
   - {fileID: 414478707}
   - {fileID: 296152396}
+  - {fileID: 441377654}
   m_Father: {fileID: 0}
   m_RootOrder: 46
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3518,7 +3554,7 @@ GameObject:
   - component: {fileID: 709337888}
   - component: {fileID: 709337887}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3535,7 +3571,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.22275324, y: 0.46016622, z: 0.22275324}
   m_Children: []
-  m_Father: {fileID: 502421205}
+  m_Father: {fileID: 441377654}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -3893,7 +3929,7 @@ RectTransform:
   - {fileID: 1097603423}
   - {fileID: 1820042308}
   m_Father: {fileID: 502421205}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5054,7 +5090,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1309370378}
         m_MethodName: Fullscreen
         m_Mode: 0
         m_Arguments:
@@ -5383,7 +5419,7 @@ RectTransform:
   - {fileID: 129178802}
   - {fileID: 953961683}
   m_Father: {fileID: 502421205}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -5668,6 +5704,8 @@ MonoBehaviour:
   pauseMenu: {fileID: 1202066518}
   settingsMenu: {fileID: 773116834}
   gun: {fileID: 1075805745}
+  deathScreen: {fileID: 414478706}
+  winScreen: {fileID: 296152395}
 --- !u!114 &1309370377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7240,7 +7278,7 @@ GameObject:
   - component: {fileID: 1841845229}
   - component: {fileID: 1841845228}
   m_Layer: 5
-  m_Name: Place Holder
+  m_Name: You Died!
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7894,7 +7932,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1309370378}
         m_MethodName: Volume
         m_Mode: 0
         m_Arguments:
@@ -8551,7 +8589,7 @@ GameObject:
   - component: {fileID: 2141872332}
   - component: {fileID: 2141872333}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: Health Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8570,12 +8608,12 @@ RectTransform:
   m_Children:
   - {fileID: 1249789228}
   - {fileID: 1875117813}
-  m_Father: {fileID: 502421205}
+  m_Father: {fileID: 441377654}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 58.599983, y: -46.99994}
+  m_AnchoredPosition: {x: -291.40002, y: 128.00006}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2141872333
